@@ -29,7 +29,7 @@ class ApplicationUtilitiesTest {
         final String readable = ApplicationUtilities.convertForView(persons);
 
         //than
-        Assertions.assertEquals("Hendrik Ebbers", readable);
+        Assertions.assertEquals("Hendrik WERRORRRRRR", readable);
     }
 
     @Test
