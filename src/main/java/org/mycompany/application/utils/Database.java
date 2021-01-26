@@ -8,14 +8,15 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import java.util.List;
+import java.util.Map;
 
 public class Database {
 
     private final EntityManagerFactory emf;
     private final EntityManager entityManager;
 
-    public Database() {
-        emf = Persistence.createEntityManagerFactory("database");
+    public Database(final String jdbcUrl) {
+        emf = Persistence.createEntityManagerFactory("database", Map.of("javax.persistence.jdbc.url", jdbcUrl));
         entityManager = emf.createEntityManager();
     }
 

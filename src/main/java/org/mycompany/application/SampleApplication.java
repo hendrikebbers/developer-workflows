@@ -9,7 +9,7 @@ import java.util.List;
 public class SampleApplication {
 
     public static void main(String[] args) {
-        Database database = new Database();
+        Database database = new Database("jdbc:h2:tcp://localhost/database");
         database.insert(new Person("Hendrik", "Ebbers", false));
         database.insert(new Person("Max", "Mustermann", true));
 
