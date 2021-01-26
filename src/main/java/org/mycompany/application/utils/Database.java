@@ -19,9 +19,10 @@ public class Database {
         entityManager = emf.createEntityManager();
     }
 
+    @SuppressWarnings("unchecked")
     public List<Person> loadAllPersons() {
             final Query q = entityManager.createQuery("select p from Person p");
-            return q.getResultList();
+        return q.getResultList();
     }
 
     public void insert(final Person person) {
