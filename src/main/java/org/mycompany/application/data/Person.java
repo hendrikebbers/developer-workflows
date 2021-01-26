@@ -30,6 +30,10 @@ public class Person {
         this.vip = vip;
     }
 
+    public Person(final String firstName, final String lastName) {
+        this(firstName, lastName, false);
+    }
+
     public String getFirstName() {
         return firstName;
     }
