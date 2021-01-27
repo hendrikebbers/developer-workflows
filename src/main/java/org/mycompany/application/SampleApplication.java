@@ -12,7 +12,7 @@ public class SampleApplication {
         Database database = new Database("jdbc:h2:tcp://localhost/database");
         database.insert(new Person("Hendrik", "Ebbers", false));
         database.insert(new Person("Max", "Mustermann", true));
-        database.insert(new Person("Markus", "Schlichhhting", true));
+        database.insert(new Person("Markus", "Schlichting", true));
 
         final List<Person> allPersons = database.loadAllPersons();
 
