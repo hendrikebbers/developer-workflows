@@ -13,7 +13,7 @@ public class ApplicationUtilities {
      * @return the human readable string
      */
     public final static String convertForView(final List<Person> persons) {
-        if(persons == null) {
+        if(persons == null || persons.isEmpty()) {
             return "";
         }
         final StringBuilder result = new StringBuilder();
